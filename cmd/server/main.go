@@ -10,7 +10,7 @@ import (
 
 func main() {
 	cfg := config.LoadConfig()
-	r := router.NewRouter()
+	r := router.NewRouter(cfg)
 
 	addr := fmt.Sprintf(":%s", cfg.Port)
 	log.Printf("info: server running on port %s", cfg.Port)
